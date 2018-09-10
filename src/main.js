@@ -1,6 +1,10 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import Axios from 'axios'
+import qs from 'qs'
+// import VueCookies from 'vue-cookies'
+import Cookies from 'js-cookie'
 import App from './App'
 import router from './router'
 import VueI18n from 'vue-i18n'
@@ -15,7 +19,11 @@ import {
   RadioGroup,
   Radio,
   Select,
-  Option
+  Option,
+  Form,
+  FormItem,
+  Icon,
+  Message
 } from 'iview'
 Vue.component('Button', Button)
 Vue.component('Table', Table)
@@ -24,6 +32,11 @@ Vue.component('Radio', Radio)
 Vue.component('RadioGroup', RadioGroup)
 Vue.component('Option', Option)
 Vue.component('Select', Select)
+// Vue.component('Switch', Switch)
+Vue.component('Form', Form)
+Vue.component('FormItem', FormItem)
+Vue.component('Icon', Icon)
+// 翻译
 Vue.use(VueI18n)
 Vue.locale = () => {}
 const messages = {
@@ -34,7 +47,16 @@ const i18n = new VueI18n({
   locale: 'en-US',
   messages
 })
+// cookie
+// Vue.use(VueCookies)
+// Vue.use(Cookies)
 Vue.config.productionTip = false
+// 注册iview
+Vue.prototype.$Message = Message
+Vue.prototype.$axios = Axios
+Vue.prototype.qs = qs
+Vue.prototype.Cookies = Cookies
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
