@@ -9,9 +9,6 @@
       >
         <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
     </Select>
-    <div>
-      {{msg}}
-    </div>
   </div>
 </template>
 

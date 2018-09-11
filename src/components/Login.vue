@@ -17,7 +17,7 @@
     <Button
       type="primary"
       @click="handleClick"
-      style='width: 200px;margin-top:20px;'
+      style='width: 200px;margin:20px 0;'
     >登录</Button>
   </div>
 </template>
@@ -91,12 +91,15 @@ export default{
 
 <style >
   .container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 360px;
+    background: #ccc;
+    position: absolute;
+    right: 240px;
+    bottom: 400px;
+    border-radius: 5px;
   }
   .input{
-    width: 360px;
+    width: 300px;
     margin-top: 20px;
   }
 </style>
